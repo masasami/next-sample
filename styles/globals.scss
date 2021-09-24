@@ -2,8 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +13,43 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+// モーダル
+.modalGrayout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000050;
+  .modalBody {
+    width: 500px;
+    background-color: #ffffff;
+    header {
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      background-color: #61dafb;
+    }
+    main {
+      padding: 30px;
+    }
+    footer {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+// テーブル
+.table {
+  border-collapse: collapse;
+  th,
+  td {
+    border: 1px solid;
+  }
 }

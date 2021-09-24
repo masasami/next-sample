@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import styles from './component0011.module.scss'
 
 export default function Component() {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,8 +10,8 @@ export default function Component() {
       <button onClick={openModal}>モーダルを開く</button>
 
       {isOpen && (
-        <div className={styles.modalGrayout}>
-          <div className={styles.modalBody}>
+        <div className="modalGrayout">
+          <div className="modalBody">
             <header>モーダルのタイトル</header>
             <main>モーダルの内容</main>
             <footer>
