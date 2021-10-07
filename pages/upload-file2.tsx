@@ -8,7 +8,7 @@ export default function Component() {
     formData.append('file', file)
 
     try {
-      const response = await fetch('api/upload', {
+      const response = await fetch('http://localhost:8000/upload', {
         method: 'POST',
         body: formData,
       })

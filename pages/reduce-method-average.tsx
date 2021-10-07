@@ -1,4 +1,3 @@
-
 export default function Component() {
   const users = [
     { id: 1, name: 'ユーザー１', age: 22 },
