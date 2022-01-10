@@ -1,16 +1,16 @@
 import { useCallback, useState } from 'react'
 
-const useCount = (initialState: number): [number, () => void, () => void] => {
+const useCount = (initialState: number): [number, { increment: () => void; decrement: () => void }] => {
   const [count, setCount] = useState(initialState)
   const increment = useCallback(() => setCount((count) => count + 1), [])
   const decrement = useCallback(() => setCount((count) => count - 1), [])
-  return [count, increment, decrement]
+  return [count, { increment, decrement }]
 }
 
 export default function Component() {
-  const [count1, increment1, decrement1] = useCount(0)
-  const [count2, increment2, decrement2] = useCount(0)
-  const [count3, increment3, decrement3] = useCount(0)
+  const [count1, { increment: increment1, decrement: decrement1 }] = useCount(0)
+  const [count2, { increment: increment2, decrement: decrement2 }] = useCount(0)
+  const [count3, { increment: increment3, decrement: decrement3 }] = useCount(0)
 
   return (
     <div>
