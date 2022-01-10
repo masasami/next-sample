@@ -55,7 +55,7 @@ const Component4 = () => {
   return (
     // title, contentを変えるとモーダルの中身のメッセージを好きな内容にできる
     <button onClick={() => dispatch({ type: 'SHOW', payload: { title: 'タイトルです', content: '内容です' } })}>
-      モーダルを開く
+      モーダルを開く
     </button>
   )
 }
