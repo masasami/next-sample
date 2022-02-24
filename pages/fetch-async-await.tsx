@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import styles from './component.module.scss'
 
 type User = { id: number; name: string }
 
@@ -18,12 +17,10 @@ export default function Component() {
   }, [])
 
   return (
-    <div className={styles.container}>
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {users.map((user) => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
   )
 }
