@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
-import styles from './component.module.scss'
 
-type User = { id: number; name: string }
+interface User {
+  id: number
+  name: string
+}
 
 export default function Component() {
   const [users, setUsers] = useState<User[]>([])
@@ -9,8 +11,9 @@ export default function Component() {
   useEffect(() => {
     ;(async () => {
       try {
-        const json = await (await fetch('api/users')).json()
-        setUsers(json)
+        const response = await fetch('api/users')
+        const users = await response.json()
+        setUsers(users)
       } catch (e) {
         console.log(e)
       }
@@ -18,12 +21,10 @@ export default function Component() {
   }, [])
 
   return (
-    <div className={styles.container}>
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {users.map((user) => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
   )
 }

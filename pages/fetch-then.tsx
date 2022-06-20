@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
-import styles from './component.module.scss'
 
-type User = { id: number; name: string }
+interface User {
+  id: number
+  name: string
+}
 
 export default function Component() {
   const [users, setUsers] = useState<User[]>([])
@@ -14,7 +16,7 @@ export default function Component() {
   }, [])
 
   return (
-    <div className={styles.container}>
+    <div>
       <ul>
         {users.map((user) => (
           <li key={user.id}>{user.name}</li>

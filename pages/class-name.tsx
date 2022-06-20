@@ -1,4 +1,4 @@
-import styles from './component.module.scss'
+import styles from 'styles/style.module.scss'
 
 export default function Component() {
   return (
