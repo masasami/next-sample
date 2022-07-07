@@ -15,36 +15,6 @@ a {
   box-sizing: border-box;
 }
 
-// モーダル
-.modalGrayout {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #00000050;
-  .modalBody {
-    width: 500px;
-    background-color: #ffffff;
-    header {
-      height: 60px;
-      line-height: 60px;
-      text-align: center;
-      background-color: #61dafb;
-    }
-    main {
-      padding: 30px;
-    }
-    footer {
-      text-align: center;
-      padding-bottom: 30px;
-    }
-  }
-}
-
 dialog {
   position: fixed;
   top: 0;
