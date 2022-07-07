@@ -8,7 +8,9 @@ export default function Component() {
     if (!file) return
     const formData = new FormData()
     formData.append('file', file)
-    const { filename } = (await axios.post('http://localhost:8000/upload', formData)).data
+    const { filename } = (
+      await axios.post('http://localhost:8000/upload', formData)
+    ).data
     console.log(filename)
     alert('ファイルをアップロードしました')
   }

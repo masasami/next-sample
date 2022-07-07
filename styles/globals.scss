@@ -56,7 +56,7 @@ dialog {
   justify-content: center;
   background-color: #00000050;
   border: none;
-  main {
+  div {
     width: 500px;
     background-color: #ffffff;
     header {
@@ -65,7 +65,7 @@ dialog {
       text-align: center;
       background-color: #61dafb;
     }
-    section {
+    main {
       padding: 30px;
     }
     footer {

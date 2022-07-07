@@ -9,5 +9,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   const id = Number(req.query.id)
   const user = users.find((user) => user.id === id)
 
-  res.status(200).json(user)
+  setTimeout(() => {
+    res.status(200).json(user)
+  }, 1000)
 }

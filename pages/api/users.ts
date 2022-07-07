@@ -6,5 +6,7 @@ const users = [
   { id: 3, name: 'ユーザー３' },
 ]
 export default (req: NextApiRequest, res: NextApiResponse) => {
-  res.status(200).json(users)
+  setTimeout(() => {
+    res.status(200).json(users)
+  }, 1000)
 }

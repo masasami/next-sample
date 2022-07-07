@@ -9,9 +9,8 @@ const upload = multer({
   storage: multer.diskStorage({
     destination: path.resolve('./public', 'uploads'),
     filename: (req, file, callback) => {
-      const ext = file.originalname.split('.').pop()
-      // uuidでファイル名を一意にする
-      filename = `${uuidv4()}.${ext}`
+      const ext = file.originalname.split('.').pop() // 拡張子取り出し
+      filename = `${uuidv4()}.${ext}` // uuidでファイル名を一意にする
       callback(null, filename)
     },
   }),
@@ -20,7 +19,7 @@ const upload = multer({
 const handler = nextConnect<NextApiRequest, NextApiResponse>()
 handler.use(upload.single('file'))
 handler.post((req, res) => {
-  res.status(200).send({ filename })
+  res.status(200).json({ filename })
 })
 
 export default handler
