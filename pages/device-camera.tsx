@@ -17,6 +17,10 @@ export default function Component() {
   const handleClickShutter = () => {
     const ctx = canvasRef.current.getContext('2d')
 
+    const audio = new Audio()
+    audio.src = 'sound.mp3'
+    audio.play()
+
     videoRef.current.pause()
     setTimeout(() => {
       videoRef.current.play()
