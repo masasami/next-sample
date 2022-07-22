@@ -13,11 +13,7 @@ export default function Component() {
   return (
     <div>
       {/* type="date"はyyyy-mm-dd形式の文字列でないと正しく表示されない */}
-      <input
-        type="date"
-        value={formatDate(date)}
-        onChange={(e) => setDate(new Date(e.target.value))}
-      />
+      <input type="date" value={formatDate(date)} onChange={(e) => setDate(new Date(e.target.value))} />
     </div>
   )
 }

@@ -14,17 +14,25 @@ export default function Component() {
           <input
             type="checkbox"
             checked={user.checked}
-            onChange={(e) => setUsers((users) => users.map((u) => ({ ...u, checked: u.id === user.id ? e.target.checked : u.checked })))}
+            onChange={(e) =>
+              setUsers((users) =>
+                users.map((u) => ({ ...u, checked: u.id === user.id ? e.target.checked : u.checked }))
+              )
+            }
           />
           <input
             type="text"
             value={user.name}
-            onChange={(e) => setUsers((users) => users.map((u) => ({ ...u, name: u.id === user.id ? e.target.value : u.name })))}
+            onChange={(e) =>
+              setUsers((users) => users.map((u) => ({ ...u, name: u.id === user.id ? e.target.value : u.name })))
+            }
           />
           <input
             type="text"
             value={user.age}
-            onChange={(e) => setUsers((users) => users.map((u) => ({ ...u, age: u.id === user.id ? e.target.value : u.age })))}
+            onChange={(e) =>
+              setUsers((users) => users.map((u) => ({ ...u, age: u.id === user.id ? e.target.value : u.age })))
+            }
           />
         </li>
       ))}

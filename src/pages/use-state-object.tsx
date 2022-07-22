@@ -7,11 +7,7 @@ export default function Component() {
   return (
     <div>
       <h1>{user.name}</h1>
-      <input
-        type="text"
-        value={user.name}
-        onChange={(e) => setUser({ ...user, name: e.target.value })}
-      />
+      <input type="text" value={user.name} onChange={(e) => setUser({ ...user, name: e.target.value })} />
     </div>
   )
 }

@@ -7,11 +7,7 @@ export default function Component() {
   return (
     <div>
       <h1>{message}</h1>
-      <input
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
+      <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
     </div>
   )
 }

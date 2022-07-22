@@ -10,11 +10,16 @@ type Action =
 const Context = createContext<{ state: State; dispatch: Dispatch<Action> }>(null)
 const reducer = (state: State, action: Action) => {
   switch (action.type) {
-    case 'INCREMENT': return { ...state, count: state.count + 1 }
-    case 'DECREMENT': return { ...state, count: state.count - 1 }
-    case 'INCREMENT_BY_PAYLOAD': return { ...state, count: state.count + action.payload }
-    case 'DECREMENT_BY_PAYLOAD': return { ...state, count: state.count - action.payload }
-    default: return state
+    case 'INCREMENT':
+      return { ...state, count: state.count + 1 }
+    case 'DECREMENT':
+      return { ...state, count: state.count - 1 }
+    case 'INCREMENT_BY_PAYLOAD':
+      return { ...state, count: state.count + action.payload }
+    case 'DECREMENT_BY_PAYLOAD':
+      return { ...state, count: state.count - action.payload }
+    default:
+      return state
   }
 }
 
